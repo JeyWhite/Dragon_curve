@@ -11,5 +11,7 @@ turtle.speed(0)
 turtle.bgcolor("black")
 turtle.pencolor("blue")
 turtle.ht()
-defs.draw(res, 90, int(80 / iterations))
+turtle.pensize(2)
+# defs.
+# defs.square_draw(res, 90, int(20 / iterations))
 turtle.done()
