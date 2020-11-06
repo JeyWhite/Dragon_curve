@@ -22,7 +22,7 @@ def replace(source: str, rules: dict) -> str:
 def processing(axiom: str, rules: dict, iterations: int):
     """
     Цикл с заменой символов в аксиоме.
-    :param axiom: аксиома L-системы. с этих нескольких символов все и начнется!(строка)
+    :param axiom: аксиома L-системы. С этих нескольких символов все и начнется!(строка)
     :param rules: словарь с правилами. ключ- заменяемый символ; значение- подставляемая строка.
     :param iterations: Количество итераций. То, сколько раз пробежим по строке с заменой.(инт)
     :return: инструкция к действию, которую будем посимвольно интерпретировать. (строка)
@@ -32,17 +32,17 @@ def processing(axiom: str, rules: dict, iterations: int):
     return axiom
 
 
-def draw(source: str, angle: int = 90, size: int = 10):
+def draw(source: str, angle: int = 90, step_size: int = 10):
     """
     Отрисовка. интерпретируем каждый символ в какое-то действие черепахи.
     :param source: инструкция к действию, которую будем посимвольно интерпретировать. (строка)
     :param angle: угол поворота черепахи.
-    :param size: Размер шага черепахи
+    :param step_size: Размер шага черепахи
     :return: ничего. черепаха сама себе вызывает канвас и все рисует.
     """
     for symbol in source:
         if symbol == "F":
-            turtle.forward(size)
+            turtle.forward(step_size)
         elif symbol == "+":
             turtle.left(angle)
         elif symbol == "-":
