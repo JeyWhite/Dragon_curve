@@ -43,7 +43,7 @@ def main():
     print(rules[variant])
     print("Вбей количество итераций:")
     iterations = int(input())
-    genome = rw.processing("F", rules[variant], iterations)
+    genome = rw.processing(sets[variant][0], rules[variant], iterations)
     print("Геном растения: " + genome)
     tree.draw(genome, sets[variant][1], 10, iterations, stack)
     return 0
