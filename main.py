@@ -1,3 +1,5 @@
+# https://habr.com/ru/post/69989/
+
 import tree
 import rewriting as rw
 
@@ -45,7 +47,7 @@ def main():
     iterations = int(input())
     genome = rw.processing(sets[variant][0], rules[variant], iterations)
     print("Геном растения: " + genome)
-    tree.draw(genome, sets[variant][1], 10, iterations, stack)
+    tree.draw(genome, sets[variant][1], 10, 1, stack)
     return 0
 
 

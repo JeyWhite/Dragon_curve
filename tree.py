@@ -1,26 +1,25 @@
 import turtle as tr
-# import random
+import random
 
 
 def draw(source: str, angle: float, segment: int, pensize: int, stack):
     tr.pu()
     tr.left(90)
-    tr.sety(tr.ycor()-400)
+    tr.sety(tr.ycor() - 400)
     tr.color("green")
     tr.ht()
     tr.pensize(pensize)
     tr.speed(0)
-    tr.pd
+    tr.pd()
     for symbol in source:
         if symbol == "F":
-            tr.fd(segment)
+            tr.fd(segment + random.randint(-3, 3))
         elif symbol == "+":
             tr.left(angle)
         elif symbol == "-":
             tr.right(angle)
         elif symbol == "[":
             push(stack, tr.pensize())
-            tr.pensize(int(tr.pensize()/2))
         elif symbol == "]":
             pop(stack)
     tr.done()
@@ -38,5 +37,5 @@ def pop(stack):
 
 
 def push(stack: list, pensize: int):
-    stack.append([tr.pos(), tr.heading(), pensize])
+    stack.append([tr.pos(), tr.heading() + random.randint(-5, 5), pensize])
     return None
